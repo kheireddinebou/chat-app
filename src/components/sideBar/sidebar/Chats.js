@@ -9,6 +9,7 @@ import Chat from "./Chat";
 
 const Chats = () => {
   const [chats, setChats] = useState({});
+  console.log(chats);
 
   const { currentUser } = useContext(AuthContext);
 
@@ -29,7 +30,7 @@ const Chats = () => {
 
   return (
     <div className="chats">
-      {chats !== {} ? (
+      {chats !== {} &&  chats ? (
         Object.entries(chats)
           ?.sort((a, b) => b[1].date - a[1].date)
           .map(chat => <Chat chat={chat} key={chat[0]} />)
