@@ -1,0 +1,122 @@
+.sidebar {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #3e3c62;
+  border-radius: 15px 0 0 15px;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 568px) {
+    width: 70%;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 80px;
+    background-color: #2f2c53;
+    padding: 0 10px;
+    border-top-left-radius: 15px;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #dddcf7;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      span {
+        color: #dddcf7;
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .search {
+    border-bottom: 1px solid #dddcf7;
+
+    p {
+      text-align: center;
+    }
+
+    input {
+      max-width: 100%;
+      padding: 15px;
+      font-size: 1.1rem;
+      background-color: #3e3c62;
+      border: none;
+      outline: none;
+      color: #dddcf7;
+      &::placeholder {
+        color: #dddcf7;
+      }
+    }
+  }
+
+  .chats {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 90%;
+  }
+
+  .chat {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    gap: 15px;
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      background-color: #2f2c53;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        color: white;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      .last-message {
+        color: #dddcf7;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  button {
+    background-color: #5f5c8d;
+    color: #dddcf7;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 10px;
+
+    &:hover {
+      background-color: #2f2c53;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

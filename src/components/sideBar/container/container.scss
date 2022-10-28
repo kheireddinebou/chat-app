@@ -1,0 +1,137 @@
+.conatiner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    height: 80px;
+    padding: 10px;
+    background-color: #5f5b8f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      color: #dddcf7;
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+
+    .toggle-btn {
+      display: none;
+      font-size: 2.5rem;
+      color: #a5b6ee !important;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+      }
+    }
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 160px);
+    padding: 15px;
+    overflow-y: auto;
+
+    .message {
+      display: flex;
+      max-width: 80%;
+      margin-top: 20px;
+      gap: 10px;
+
+      @media screen and (max-width: 768px) {
+        max-width: 90%;
+      }
+
+      &.owner {
+        flex-direction: row-reverse;
+        align-self: flex-end;
+
+        .info {
+          align-items: flex-end;
+        }
+
+        .content {
+          align-items: flex-end;
+          span {
+            border-radius: 10px 0 10px 10px;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        span {
+          color: gray;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        img {
+          max-width: 60%;
+          object-fit: cover;
+          @media screen and (max-width: 768px) {
+            max-width: 100%;
+          }
+        }
+
+        span {
+          background-color: #a5b6ee;
+          padding: 5px 10px;
+          border-radius: 0 10px 10px 10px;
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  .input-container {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    input {
+      font-size: 1.3rem;
+      padding: 10px;
+      border: none;
+      outline: none;
+      color: gray;
+      width: 90%;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    button * {
+      padding: 7px;
+      color: #827fa3;
+      font-size: 3.5rem;
+      font-weight: 500;
+      min-width: 70px;
+
+      &:hover {
+        color: #1a1737;
+        transition: all 0.2s ease-in;
+      }
+    }
+
+    button {
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+}
