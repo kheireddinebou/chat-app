@@ -9,7 +9,6 @@ import Chat from "./Chat";
 
 const Chats = () => {
   const [chats, setChats] = useState({});
-  console.log(chats);
 
   const { currentUser } = useContext(AuthContext);
 
